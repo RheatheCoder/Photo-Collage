@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title>Collage Web App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<h1> Collage Web App</h1>
+<br>
+<hr>
+<h4> Welcome to the Collage Web App. As soon as the popup appears on your screen, please press allow in order for the website to take your selfie </h4>
+<h3>These are the instructions for using this app: After you click allow when the popup comes click on the start button and say "take my selfie".  </h3>
+<br>
+<button id = "save" class = "btn btn-primary" onclick = "save()">Start</button>
+<h4> Press the Button</h4>
+<br>
+<h4> Your Webcam will be displayed here</h4>
+<div id="camera">
+
+</div>
+<h4> Your Selfie will be displayed here</h4>
+<div id = "resultShow">
+
+</div>
+<div id = "result1"> <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqNHE0krAKd2OIaru_AyTUgOr7IvrphZENVQDHiLe055thJlQt3LfFjASuYg4aI55yJJ0&usqp=CAU"> </div>
+<div id = "result2"> <img src = "https://creazilla-store.fra1.digitaloceanspaces.com/emojis/48220/blue-heart-emoji-clipart-xl.png"></div>
+<div id = "result3"> <img src = "data:image/png;base64,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"></div>
+</body>
+
+</html>
